@@ -6,4 +6,4 @@
 
 ## Laravel 11 Jetstream Features
 
-- all features are configurable in files: ``` fortify.php``` and ```jetstream.php```
+- all features are configurable in files: ```fortify.php``` and ```jetstream.php```
