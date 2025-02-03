@@ -20,11 +20,13 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('posts', Posts::class)->middleware('auth');
+Route::get('/posts', Posts::class)->middleware('auth')->name('posts');
 
-Route::middleware(['auth'])->group(function () {
-    Route::resource('tasks', TaskController::class);
-});
+// Route::get('posts', Posts::class)->middleware('auth');
+
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('tasks', TaskController::class);
+// });
 
 Route::post('/team/invite', [TeamInvitationController::class, 'invite'])->name('team-invite');
 Route::get('/team/invitations/{invitation}/accept', [TeamInvitationController::class, 'accept'])->name('team-invitations.accept');
